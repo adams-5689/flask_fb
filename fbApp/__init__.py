@@ -1,7 +1,8 @@
 from flask import Flask
 
 from vews import app
-from . import modele
+from modele import modele
+app.config.from_object('config')
 
 modele.db.init_app(app)
 
